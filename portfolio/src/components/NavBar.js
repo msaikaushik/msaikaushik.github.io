@@ -1,4 +1,6 @@
 import React from "react";
+import "./styles/NavBar.css";
+import { BsReverseLayoutSidebarReverse } from 'react-icons/bs';
 
 const NavBar = () => {
   return (
@@ -26,6 +28,7 @@ const NavBar = () => {
       <header>
           {/* TODO: Check Font of Logo */}
           <h1 className="logo">K</h1>
+          <h1 className="menu-btn"><BsReverseLayoutSidebarReverse /></h1>
       </header>
     </div>
   );
