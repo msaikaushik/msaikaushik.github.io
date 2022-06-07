@@ -23,7 +23,7 @@ export default function BackgroundPage() {
         scrub: 2,
         start: "top 35%",
         end: "bottom center",
-      }
+      },
     });
 
     gsap.to(
@@ -37,7 +37,7 @@ export default function BackgroundPage() {
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
     );
@@ -53,7 +53,7 @@ export default function BackgroundPage() {
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
     );
@@ -68,26 +68,26 @@ export default function BackgroundPage() {
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
-    )
+    );
 
     gsap.to(
       element.querySelector(".treeline"),
       {
         y: -220,
         duration: 6,
-        scaleY: 1.25,  
+        scaleY: 1.25,
         scrollTrigger: {
           trigger: element.querySelector(".scrollBegin"),
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
-    )
+    );
 
     gsap.to(
       element.querySelector(".foreground"),
@@ -99,7 +99,7 @@ export default function BackgroundPage() {
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
     );
@@ -114,26 +114,22 @@ export default function BackgroundPage() {
           scrub: 2,
           start: "top 35%",
           end: "bottom center",
-        }
+        },
       },
       "-=6"
     );
 
-    gsap.from(
-      element.querySelector(".heading"),
-      {
-        duration: 5,
-        y: -500,
-        scale: 1.2,
-        scrollTrigger: {
-          trigger: element.querySelector(".scrollBegin"),
-          scrub: 2,
-          start: "top center",
-          end: "bottom center",
-        }
-      }
-    );
-
+    gsap.from(element.querySelector(".heading"), {
+      duration: 5,
+      y: -500,
+      scale: 1.2,
+      scrollTrigger: {
+        trigger: element.querySelector(".scrollBegin"),
+        scrub: 2,
+        start: "top center",
+        end: "bottom center",
+      },
+    });
   }, []);
 
   return (
@@ -141,7 +137,7 @@ export default function BackgroundPage() {
       <section className="scrollBegin">
         {/* <img src="images/background.png" alt="sky"/> */}
         {/* TODO: Look into Fonts. */}
-        
+
         <img
           src="images/level6.png"
           alt="faraway_mountains"
@@ -150,7 +146,7 @@ export default function BackgroundPage() {
         <img src="images/level5.png" alt="mountains" className="mountains" />
         <img src="images/level4.png" alt="river" className="river" />
         <img src="images/level3.png" alt="lake" className="lake" />
-        
+
         <h2 className="heading">
           Hi!, I'm <span className="name">Kaushik.</span>
         </h2>

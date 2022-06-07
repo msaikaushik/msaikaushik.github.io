@@ -36,7 +36,7 @@ section::before
     width: 100%;
     height: 200px;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
-    z-index: 1000;
+    z-index: 50;
 }
 
 .shadow
@@ -48,7 +48,7 @@ section::before
     width: 100%;
     height: 200px;
     background: linear-gradient(to top, rgb(0, 0, 0) 60%, transparent);
-    z-index: 1000;
+    z-index: 50;
 }
 
 section img {

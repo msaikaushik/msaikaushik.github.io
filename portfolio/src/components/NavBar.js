@@ -1,35 +1,32 @@
 import React from "react";
 import "./styles/NavBar.css";
-import { BsReverseLayoutSidebarReverse } from 'react-icons/bs';
+
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="menu-container">
-        <nav>
-          <a href="#" className="Menu-Item">
-            Home
-          </a>
-          <a href="#" className="Menu-Item">
-            About
-          </a>
-          <a href="#" className="Menu-Item">
-            Skills
-          </a>
-          <a href="#" className="Menu-Item">
-            Projects
-          </a>
-          <a href="#" className="Menu-Item">
-            Contact
-          </a>
-        </nav>
-      </div>
-
-      <header>
-          {/* TODO: Check Font of Logo */}
-          <h1 className="logo">K</h1>
-          <h1 className="menu-btn"><BsReverseLayoutSidebarReverse /></h1>
-      </header>
+    <div className="navigation-bar">
+      <ul className="navigation-bar-list">
+        <li className="navigation-bar-list-item">
+          <a href="#">Home</a>
+        </li>
+        <li className="navigation-bar-list-item">
+          <a href="#">About</a>
+        </li>
+        <li className="navigation-bar-list-item">
+          <a href="#">Skills</a>
+        </li>
+        <li className="navigation-bar-list-item">
+          <a href="#">Experience</a>
+        </li>
+        <li className="navigation-bar-list-item">
+          <a href="#">Projects</a>
+        </li>
+        <li className="navigation-bar-list-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </div>
   );
 };
