@@ -133,7 +133,7 @@ export default function BackgroundPage() {
   }, []);
 
   return (
-    <div ref={mainBackground}>
+    <div ref={mainBackground} className="background">
       <section className="scrollBegin">
         {/* <img src="images/background.png" alt="sky"/> */}
         {/* TODO: Look into Fonts. */}

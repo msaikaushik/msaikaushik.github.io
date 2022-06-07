@@ -14,11 +14,11 @@ body
 .navigation-bar {
     /* width: 100vw; */
     height: 10vh;
-    display: flex;
     z-index: 100;
-    justify-content: flex-end;
-
     padding-top: 2vh;
+
+    display: flex;
+    justify-content: flex-end;
 }
 
 ul

@@ -79,3 +79,8 @@ h2
 {
     background: linear-gradient(to bottom, #EBEFEF 60%, transparent);
 }
+
+.background
+{
+    padding-top: 10vh;
+}
