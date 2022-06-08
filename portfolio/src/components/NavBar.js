@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 const NavBar = () => {
   return (
-    <div className="navigation-bar">
+    <nav className="fill">
       <ul className="navigation-bar-list">
         <li className="navigation-bar-list-item">
           <a href="#">Home</a>
@@ -27,7 +27,7 @@ const NavBar = () => {
           <a href="#">Contact</a>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
