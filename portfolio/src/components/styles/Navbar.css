@@ -40,8 +40,7 @@ li a {
   transition: all 0.5s ease-out;
 }
 
-a:hover,
-a:focus {
+a:hover {
   background-color: rgba(30, 30, 30, 0.868);
   color: rgb(255, 255, 255);
   margin: 1vh 1vw;

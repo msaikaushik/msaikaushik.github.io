@@ -1,0 +1,45 @@
+.about {
+  background-color: black;
+  color: white;
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.color-container {
+  height: 80vh;
+  width: 40vw;
+  margin-bottom: 10%;
+  background-color: #ff5d00;
+}
+
+.about-container {
+  width: 50vw;
+
+}
+
+.flowing-desc {
+  font-size: 2.5em;
+  font-weight: 1000;
+  /* import bold font */
+
+  text-align: left;
+
+  padding: 5%;
+  margin: 2%;
+}
+
+.interests {
+  padding: 5%;
+  margin: 2%;
+  text-align: left;
+
+  color: #ff5d00;
+  font-size: large;
+}
