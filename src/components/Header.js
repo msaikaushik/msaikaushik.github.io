@@ -12,7 +12,11 @@ function Header({ toggleDarkMode }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <ScrollLink to="home" smooth={true} duration={500} className="text-2xl font-bold text-gray-800 dark:text-gray-200 cursor-pointer">
+            <ScrollLink to="home" smooth={true} duration={500} className="text-2xl font-bold text-gray-800 dark:text-gray-200 cursor-pointer 
+                                                                          bg-gradient-to-r bg-clip-text text-transparent
+                                                                          from-blue-400 via-teal-500 to-green-500
+                                                                          dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent
+                                                                          dark:from-green-400 dark:via-green-500 dark:to-green-600">
               K.
             </ScrollLink>
           </div>

@@ -5,12 +5,24 @@ import { FileText, Mail, Linkedin } from 'lucide-react';
 const About = () => {
   return (
     <div className="container mx-auto px-4 pt-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <h1 className="text-4xl font-bold mb-8">About Me</h1>
+      <h1 className="text-4xl font-bold mb-8
+                    bg-gradient-to-r bg-clip-text text-transparent
+                    from-teal-600 via-green-700 to-emerald-900
+                    dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent
+                    dark:from-red-400 dark:via-yellow-400 dark:to-orange-500">
+        About Me
+      </h1>
 
       <div className="grid md:grid-cols-3 gap-8">
         <div className="md:col-span-2">
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Who I Am</h2>
+            <h2 className="text-2xl font-semibold mb-4
+                          bg-gradient-to-r bg-clip-text text-transparent
+                          from-indigo-500 via-blue-500 to-purple-500
+                          dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent
+                          dark:from-teal-500 dark:via-purple-600 dark:to-indigo-800">
+              Who I Am
+            </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Hello! I'm Kaushik, a passionate web developer based in Dublin. With 4 years of Full Stack Development Experience, I specialize in creating responsive and user-friendly web applications using modern technologies.
             </p>
@@ -20,7 +32,13 @@ const About = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">My Approach</h2>
+            <h2 className="text-2xl font-semibold mb-4
+                          bg-gradient-to-r bg-clip-text text-transparent
+                          from-indigo-500 via-blue-500 to-purple-500
+                          dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent
+                          dark:from-teal-500 dark:via-purple-600 dark:to-indigo-800">
+              My Approach
+            </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices. My goal is always to deliver high-quality solutions that not only meet but exceed client expectations.
             </p>
@@ -30,7 +48,13 @@ const About = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Education & Certifications</h2>
+            <h2 className="text-2xl font-semibold mb-4
+                          bg-gradient-to-r bg-clip-text text-transparent
+                          from-indigo-500 via-blue-500 to-purple-500
+                          dark:bg-gradient-to-r dark:bg-clip-text dark:text-transparent
+                          dark:from-teal-500 dark:via-purple-600 dark:to-indigo-800">
+              Education & Certifications
+            </h2>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>Master's Degree in Computer Science, Trinity College Dublin, 2022</li>
               <li>Bachelor's Degree in Electronics and Communication Engineering, SRM University, 2018</li>
@@ -41,7 +65,7 @@ const About = () => {
         </div>
 
         <div className="md:col-span-1">
-          <img 
+          <img
             src="/path/to/your/photo.jpg" // Replace with your image path
             alt="Kaushik"
             className="w-full rounded-lg shadow-md mb-6"
