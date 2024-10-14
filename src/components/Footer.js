@@ -2,16 +2,16 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 font-mono">
+    <footer className="bg-gray-800 dark:bg-gray-900 text-white py-8 font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Copyright and "Made with ❤️ in React" */}
           <div className="text-center md:text-left">
-            <p className="text-xs">
+            <p className="text-xs text-gray-300 dark:text-gray-400">
               © {new Date().getFullYear()} My Portfolio. All rights reserved.
             </p>
-            <p className="text-xs mt-1">
-              Made with <span className="text-red-500">❤️</span> in React
+            <p className="text-xs mt-1 text-gray-300 dark:text-gray-400">
+              Made with <span className="text-red-500 dark:text-red-400">❤️</span> in React
             </p>
           </div>
 
@@ -20,7 +20,7 @@ function Footer() {
             <nav className="flex space-x-4">
               <a
                 href="https://github.com/msaikaushik"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,7 +40,7 @@ function Footer() {
               </a>
               <a
                 href="https://linkedin.com/in/msaikaushik"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
