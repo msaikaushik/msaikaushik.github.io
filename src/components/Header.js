@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll'; // Import Link from react-scroll
 
 function Header({ toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,21 +7,22 @@ function Header({ toggleDarkMode }) {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md">
+    <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-gray-800 dark:text-gray-200">K.</Link>
+            <ScrollLink to="home" smooth={true} duration={500} className="text-2xl font-bold text-gray-800 dark:text-gray-200 cursor-pointer">
+              K.
+            </ScrollLink>
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Home</Link>
-            <Link to="/projects" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Projects</Link>
-            <Link to="/skills" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Skills</Link>
-            <Link to="/about" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">About</Link>
-            <Link to="/contact" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Contact</Link>
+            <ScrollLink to="home" smooth={true} duration={500} className="text-gray-800 dark:text-gray-200 hover:text-indigo-500 cursor-pointer">Home</ScrollLink>
+            <ScrollLink to="projects" smooth={true} duration={500} className="text-gray-800 dark:text-gray-200 hover:text-indigo-500 cursor-pointer">Projects</ScrollLink>
+            <ScrollLink to="skills" smooth={true} duration={500} className="text-gray-800 dark:text-gray-200 hover:text-indigo-500 cursor-pointer">Skills</ScrollLink>
+            <ScrollLink to="contact" smooth={true} duration={500} className="text-gray-800 dark:text-gray-200 hover:text-indigo-500 cursor-pointer">Contact</ScrollLink>
           </nav>
 
           {/* Dark Mode Toggle */}
@@ -46,11 +47,10 @@ function Header({ toggleDarkMode }) {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="md:hidden">
-          <Link to="/" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</Link>
-          <Link to="/projects" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</Link>
-          <Link to="/skills" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</Link>
-          <Link to="/about" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</Link>
-          <Link to="/contact" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</Link>
+          <ScrollLink to="home" smooth={true} duration={500} className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">Home</ScrollLink>
+          <ScrollLink to="projects" smooth={true} duration={500} className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">Projects</ScrollLink>
+          <ScrollLink to="skills" smooth={true} duration={500} className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">Skills</ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={500} className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">Contact</ScrollLink>
         </nav>
       )}
     </header>
