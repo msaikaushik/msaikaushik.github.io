@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 bg-white dark:bg-gray-900">
+    <div className="container mx-auto px-8 py-12 bg-white dark:bg-gray-900">
       <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">Contact Me</h1>
       <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
         Feel free to reach out to me using the form below.

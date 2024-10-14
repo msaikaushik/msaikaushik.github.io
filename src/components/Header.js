@@ -1,31 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // Load dark mode preference from local storage or system preference
-  useEffect(() => {
-    const darkModePreference = localStorage.getItem('theme') === 'dark';
-    setIsDarkMode(darkModePreference || window.matchMedia('(prefers-color-scheme: dark)').matches);
-    if (darkModePreference) {
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  };
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md">
@@ -38,21 +17,11 @@ function Header() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">
-              Home
-            </Link>
-            <Link to="/projects" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">
-              Projects
-            </Link>
-            <Link to="/skills" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">
-              Skills
-            </Link>
-            <Link to="/about" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">
-              Contact
-            </Link>
+            <Link to="/" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Home</Link>
+            <Link to="/projects" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Projects</Link>
+            <Link to="/skills" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Skills</Link>
+            <Link to="/about" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">About</Link>
+            <Link to="/contact" className="text-gray-800 dark:text-gray-200 hover:text-indigo-500">Contact</Link>
           </nav>
 
           {/* Dark Mode Toggle */}
@@ -60,7 +29,7 @@ function Header() {
             onClick={toggleDarkMode}
             className="ml-4 text-gray-800 dark:text-gray-200 hover:text-indigo-500"
           >
-            {isDarkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+            {document.documentElement.classList.contains('dark') ? '🌞 Light Mode' : '🌙 Dark Mode'}
           </button>
 
           {/* Mobile Menu Button */}
@@ -77,21 +46,11 @@ function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="md:hidden">
-          <Link to="/" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-            Home
-          </Link>
-          <Link to="/projects" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-            Projects
-          </Link>
-          <Link to="/skills" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-            Skills
-          </Link>
-          <Link to="/about" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-            About
-          </Link>
-          <Link to="/contact" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
-            Contact
-          </Link>
+          <Link to="/" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</Link>
+          <Link to="/projects" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</Link>
+          <Link to="/skills" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</Link>
+          <Link to="/about" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About</Link>
+          <Link to="/contact" className="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</Link>
         </nav>
       )}
     </header>

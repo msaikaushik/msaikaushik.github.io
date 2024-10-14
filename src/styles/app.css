@@ -1,3 +1,24 @@
 html {
     scroll-behavior: smooth;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    /* Light mode */
+}
+
+body.dark {
+    background-color: #1a202c;
+    /* Dark mode */
+}
+
+/* You can also apply padding to the main content if needed */
+main {
+    padding: 16px;
+    /* Or any value that suits your design */
+}
