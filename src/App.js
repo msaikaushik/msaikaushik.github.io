@@ -12,7 +12,7 @@ function App() {
   // Load dark mode preference from local storage or system preference
   useEffect(() => {
     const darkModePreference = localStorage.getItem("theme") === "dark";
-    setIsDarkMode(darkModePreference || window.matchMedia("(prefers-color-scheme: dark)").matches);
+    setIsDarkMode(darkModePreference);
     if (darkModePreference) {
       document.documentElement.classList.add("dark");
     }
